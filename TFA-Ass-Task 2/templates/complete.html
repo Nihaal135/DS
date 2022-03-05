@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Markcomplete
+{% endblock %}
+
+{% block content %}
+<h3>All the available Notes: </h3>
+<ul>
+{% for note in notes %}
+    <li><s>{{ note.id }}- {{ note.note }}</s></li>
+{% endfor %}
+</ul>
+{% endblock %}
