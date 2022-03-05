@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Update
+{% endblock %}
+
+
+{% block content %}
+<form action="{{ url_for('update') }}"method="POST">
+    <input tpe="text" name="id" placeholder="enter note id to update"/>
+    <input tpe="text" name="updateNote" placeholder="enter with note update value"/>
+    <button>update</button>
+</form>
+{% if note %}
+  <h1> {{ note }} row/s updated</h1>
+{% endif %}
+{% endblock %}
+
+   
+  
